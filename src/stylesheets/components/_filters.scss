@@ -1,0 +1,38 @@
+@import "../variables";
+
+.filter {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 1000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  li {
+    background: black;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+
+    &.selected {
+      background: $foreground-colour;
+      color: $background-colour;
+    }
+
+    a {      
+      width: 100%;
+      display: inline-block;
+      padding: 5px 20px;
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

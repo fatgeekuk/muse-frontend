@@ -1,0 +1,34 @@
+
+
+body {
+  font-family: sans-serif;
+  background: $background-colour;
+  color: $foreground-colour;
+}
+
+#root {
+  background: $tertiary-colour;
+  height: 100%;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  section {
+    flex-grow: 1;
+
+    &#play-list {
+      flex-grow: 3;
+    }
+  }
+}
+
+h1 {  
+  margin: 0;
+}
+
+section {
+  padding: 10px;
+}

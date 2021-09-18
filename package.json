@@ -1,0 +1,38 @@
+{
+  "name": "react-redux",
+  "version": "1.0.0",
+  "description": "testbed for react/redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "browserify src/javascript/index.js -o dist/javascript/index.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ]",
+    "build-styles": "node-sass src/stylesheets/index.scss -o dist/stylesheets",
+    "serve": "http-server dist",
+    "watch-js": "chokidar \"src/**/*.js\" -c \"npm run build-js\"",
+    "watch-css": "chokidar  \"src/**/*.scss\" -c \"npm run build-styles\"",
+    "everything": "concurrently \"npm run watch-js\" \"npm run watch-css\" \"npm run serve\""
+  },
+  "author": "Peter Morris",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^6.2.1",
+    "http-server": "^0.12.3",
+    "node-sass": "^6.0.1",
+    "precise-watcher": "^1.0.1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4"
+  }
+}

@@ -1,0 +1,16 @@
+@import "../variables";
+
+section.search {
+  display: flex;
+  input {
+    height: 54px;
+    border: 2px solid black;
+    border-radius: 27px;
+    padding: 4px 20px;
+    flex-grow: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

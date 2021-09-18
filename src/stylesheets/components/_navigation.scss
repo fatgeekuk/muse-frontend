@@ -1,0 +1,14 @@
+@import "../variables";
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+
+  padding: 8px;
+  background: $primary-colour;
+
+  .search {
+    flex-grow: 10;
+  }
+
+}
